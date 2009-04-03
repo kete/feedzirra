@@ -3,6 +3,9 @@ module Feedzirra
   # Parser for dealing with Atom feeds.
   #
   # == Attributes
+  # * prev_page
+  # * next_page
+  # * last_page
   # * title
   # * subtitle
   # * updated
@@ -13,6 +16,9 @@ module Feedzirra
   class Atom
     include SAXMachine
     include FeedUtilities
+    element :"atom:link", :as => :prev_page, :value => :href, :with => {:rel => 'prev'}
+    element :"atom:link", :as => :next_page, :value => :href, :with => {:rel => 'next'}
+    element :"atom:link", :as => :last_page, :value => :href, :with => {:rel => 'last'}
     element :title
     element :subtitle
     element :updated

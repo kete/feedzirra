@@ -69,6 +69,18 @@ describe Feedzirra::RSS do
       @feed.respond_to?(:feed_url=).should == true
     end
 
+    it "should parse the prev atom:link" do
+      @feed.prev_page.should == "http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington&#38;page=1"
+    end
+
+    it "should parse the next atom:link" do
+      @feed.next_page.should == "http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington&#38;page=3"
+    end
+
+    it "should parse the last atom:link" do
+      @feed.last_page.should == "http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington&#38;page=5"
+    end
+
     it "should parse entries" do
       @feed.entries.size.should == 50
     end

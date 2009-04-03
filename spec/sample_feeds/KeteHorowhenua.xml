@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss" version="2.0">
   <channel>
-    <atom:link href="http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington&amp;page=2" rel="next"/>
-    <atom:link href="http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington&amp;page=8" rel="last"/>
+    <atom:link href="http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington&amp;page=1" rel="prev"/>
+    <atom:link href="http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington&amp;page=3" rel="next"/>
+    <atom:link href="http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington&amp;page=5" rel="last"/>
     <title>horowhenua.kete.net.nz - Latest 50 Results in images</title>
     <link>http://horowhenua.kete.net.nz/site/all/images/rss.xml?search_terms=wellington</link>
     <link rel="related" href="http://horowhenua.kete.net.nz/" />

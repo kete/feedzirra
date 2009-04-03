@@ -35,7 +35,19 @@ describe Feedzirra::Atom do
     it "should parse the feed_url" do
       @feed.feed_url.should == "http://aws.typepad.com/aws/atom.xml"
     end
-    
+
+    it "should parse the prev atom:link" do
+      @feed.prev_page.should == "http://aws.typepad.com/aws/atom.xml?page=1"
+    end
+
+    it "should parse the next atom:link" do
+      @feed.next_page.should == "http://aws.typepad.com/aws/atom.xml?page=3"
+    end
+
+    it "should parse the last atom:link" do
+      @feed.last_page.should == "http://aws.typepad.com/aws/atom.xml?page=5"
+    end
+
     it "should parse entries" do
       @feed.entries.size.should == 10
     end
