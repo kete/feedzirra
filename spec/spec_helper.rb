@@ -56,3 +56,11 @@ end
 def sample_wfw_feed
   load_sample("PaulDixExplainsNothingWFW.xml")
 end
+
+def sample_media_rss_feed
+  load_sample("KeteHorowhenua.xml")
+end
+
+def sample_media_rss_entry_content
+  load_sample("KeteHorowhenuaFirstEntry.xml")
+end

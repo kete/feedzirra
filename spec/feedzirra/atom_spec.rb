@@ -23,7 +23,15 @@ describe Feedzirra::Atom do
     it "should parse the url" do
       @feed.url.should == "http://aws.typepad.com/aws/"
     end
-    
+
+    it "should parse updated" do
+      @feed.updated.should == "2009-01-16T18:21:00Z"
+    end
+
+    it "should parse the subtitle" do
+      @feed.subtitle.should == "Amazon Web Services, Products, Tools, and Developer Information..."
+    end
+
     it "should parse the feed_url" do
       @feed.feed_url.should == "http://aws.typepad.com/aws/atom.xml"
     end
