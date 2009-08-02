@@ -2,11 +2,11 @@
  
 Gem::Specification.new do |s|
   s.name = %q{feedzirra}
-  s.version = "0.0.16"
+  s.version = "0.0.16.1"
  
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Paul Dix"]
-  s.date = %q{2009-02-19}
+  s.date = %q{2009-08-03}
   s.email = %q{paul@pauldix.net}
   s.files = [
     "lib/core_ext/date.rb",
