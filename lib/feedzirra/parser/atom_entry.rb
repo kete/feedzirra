@@ -38,6 +38,12 @@ module Feedzirra
       element :"media:description", :as => :media_description
       element :"media:thumbnail", :as => :media_thumbnail, :value => :url
       element :enclosure, :value => :url
+
+      elements :link, :as => :links, :value => :href
+
+      def url
+        @url || links.first
+      end
     end
 
   end
