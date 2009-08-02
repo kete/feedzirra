@@ -1,10 +1,10 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require File.join(File.dirname(__FILE__), %w[.. .. spec_helper])
 
-describe Feedzirra::AtomEntry do
+describe Feedzirra::Parser::AtomEntry do
   before(:each) do
     # I don't really like doing it this way because these unit test should only rely on AtomEntry,
     # but this is actually how it should work. You would never just pass entry xml straight to the AtomEnry
-    @entry = Feedzirra::Atom.parse(sample_atom_feed).entries.first
+    @entry = Feedzirra::Parser::Atom.parse(sample_atom_feed).entries.first
   end
   
   it "should parse the title" do
@@ -13,6 +13,10 @@ describe Feedzirra::AtomEntry do
   
   it "should parse the url" do
     @entry.url.should == "http://aws.typepad.com/aws/2009/01/aws-job-architect-designer-position-in-turkey.html"
+  end
+  
+  it "should parse the url even when" do
+    Feedzirra::Parser::Atom.parse(load_sample("atom_with_link_tag_for_url_unmarked.xml")).entries.first.url.should == "http://www.innoq.com/blog/phaus/2009/07/ja.html"
   end
   
   it "should parse the author" do
